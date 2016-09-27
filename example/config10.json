@@ -1,0 +1,51 @@
+{
+  "trialrun": false,
+  "batchsize": 10000,
+  "printreplacements" : false,
+
+  "database": 
+    {
+        "dbname"    : "doctors77",
+        "create"    : true,
+        "url"       : "https://20c66bd5-dc77-459f-a24d-a286897f74ec-bluemix:6a0864d988b43391fa6b054c5ab3688e88250269e2f8b58c7668a6cf32cc6611@20c66bd5-dc77-459f-a24d-a286897f74ec-bluemix.cloudant.com"
+    },
+
+  "databaseXX": 
+    {
+      "dbname"  : "doctors77",
+      "create"  : true,
+      "url"     : "http://localhost:5984"
+    },
+
+  "inputfile": 
+    {
+ 		  "filename"     : "/Users/daveweilert/Desktop/I2A2/3000_Downloadable_File_TAB.txt",
+      "headerrow"    : true,
+      "skipfirstrow" : false,
+      "keepfields"   : ["3","4","5","6","7","8","9","10","15","16","17","18","19","20","21","22"],
+      "fieldnames"   : [],
+      "delimiter"    : "tab"
+    },
+
+	"buildindexes":
+		[
+			{"name": "gender_idx",  "type": "json", "fields": ["GENDER"] },
+			{"name": "last_idx",    "type": "json", "fields": ["LST_NAME"] },
+			{"name": "first_name",  "type": "json", "fields": ["FST_NAME"] }
+		],
+
+	"indexdefinitions":
+		[
+      {
+        "_id"     : "_design/searchIndex",
+        "views"   : { },
+        "language": "javascript",
+        "indexes" : {
+          "basic": {
+            "analyzer":"standard",
+             "index":"function (doc) { if(doc.LST_NAME) { index( 'name', doc.LST_NAME, {'store': true, 'index': true} ); } }"
+          }
+        }
+      }
+		]
+}

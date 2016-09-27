@@ -1,0 +1,16 @@
+{
+  "name": "Data_Loader",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cfenv": "^1.0.3",
+    "cloudant": "^1.4.1",
+    "fs": "0.0.2",
+    "line-by-line": "^0.1.4",
+    "q": "^1.4.1"
+  },
+  "repository": {}
+}
