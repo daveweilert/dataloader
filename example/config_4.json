@@ -1,0 +1,33 @@
+{
+  "trialrun": false,
+  "batchsize": 10,
+  "printreplacements" : true,
+
+  "database": 
+    {
+      "dbname"  : "doctors",
+      "create"  : true,
+      "url"     : "http://localhost:5984"
+    },
+
+  "inputfile": 
+    {
+      "filename"    : "/Users/daveweilert/GitHub/dataloader/example/data_file_4_TAB.txt",
+      "headerrow"    : true,
+      "keepfields"   : ["3","4","5","6","7","8","9","10","15","16","17","18","19","20","21","22"]
+    },
+
+	"buildindexes":
+		[
+			{"name": "last_idx",    "type": "json", "fields": ["LST_NAME"] },
+			{"name": "first_idx",   "type": "json", "fields": ["FST_NAME"] }
+		],
+
+  "validators":
+	  [
+		  {"fld":[21],      "task":"range",    "data": [0,99999]},
+		  {"fld":[6],       "task":"values",   "data": ["M","F"]},
+      {"fld":[3,4],     "task":"datatype", "data": "name"},
+		  {"fld":[8,15,22], "task":"replace",  "data": ["\"",""]}	
+	  ]
+}

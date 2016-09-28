@@ -1,0 +1,111 @@
+npm start ./example/config_40000.json
+
+> Data_Loader@1.0.0 start /Users/daveweilert/GitHub/dataloader
+> node dataloader.js "./example/config_40000.json"
+
+cldr1000i - Start Parameter: 0: /usr/local/bin/node
+cldr1000i - Start Parameter: 1: /Users/daveweilert/GitHub/dataloader/dataloader.js
+cldr1000i - Start Parameter: 2: ./example/config_40000.json
+cldr1001i - Loading parameters from configuration file: ././example/config_40000.json
+cldr1003i - Data load program started ...
+cldr1010i - Data load program loaded into memory
+cldr2056i - PARM - buildindexes[0]: last_idx
+cldr2056i - PARM - buildindexes[1]: first_idx
+cldr2018i - PARM - database.dbname: doctors
+cldr2020i - PARM - database.url: http://localhost:5984
+cldr2022i - PARM - database.create: true
+cldr2024i - PARM - inputfile.filename: /Users/daveweilert/GitHub/dataloader/example/data_file_40000_TAB.txt
+cldr2035i - PARM - inputfile.delimiter: TAB
+cldr2026i - PARM - inputfile.headerrow: false
+cldr2041i - PARM - inputfile.skipfirstrow: true
+cldr2055i - PARM - inputfile.keepfields: 3, 4, 5, 6, 7, 8
+cldr2046i - PARM - inputfile.fieldnames : LastName,FirstName,Initial,Gender,Title,Medical Shool
+cldr2036i - PARM - trialrun: false
+cldr2039i - PARM - batchsize: 5000
+cldr2044i - PARM - printreplacements: false
+cldr1402i - 10 validator definition(s) defined in configuration file
+cldr1403i - Configuring validator: 1
+cldr1414i - Type Validator: Range, defined at: R0
+cldr1403i - Configuring validator: 2
+cldr1414i - Type Validator: DataTypes, defined at: T0
+cldr1403i - Configuring validator: 3
+cldr1423i - Type Validator: Replace, defined at: P0
+cldr1403i - Configuring validator: 4
+cldr1414i - Type Validator: DataTypes, defined at: T1
+cldr1403i - Configuring validator: 5
+cldr1414i - Type Validator: DataTypes, defined at: T2
+cldr1403i - Configuring validator: 6
+cldr1413i - Type Validator: ValidValues, defined at: V0
+cldr1403i - Configuring validator: 7
+cldr1423i - Type Validator: Replace, defined at: P1
+cldr1403i - Configuring validator: 8
+cldr1413i - Type Validator: ValidValues, defined at: V1
+cldr1403i - Configuring validator: 9
+cldr1414i - Type Validator: DataTypes, defined at: T3
+cldr1403i - Configuring validator: 10
+cldr1423i - Type Validator: Replace, defined at: P2
+cldr1408i - Field 0 will be validated for Data Type using entry: T0
+cldr1408i - Field 1 will be validated for Data Type using entry: T0
+cldr1408i - Field 2 will be validated for Data Type using entry: T0
+cldr1408i - Field 3 will be validated for Data Type using entry: T1
+cldr1410i - Field 3 will replace data using entry: P0
+cldr1408i - Field 4 will be validated for Data Type using entry: T1
+cldr1410i - Field 4 will replace data using entry: P0
+cldr1408i - Field 5 will be validated for Data Type using entry: T0
+cldr1407i - Field 6 will be validated for Valid Values using entry: V1
+cldr1407i - Field 7 will be validated for Valid Values using entry: V0
+cldr1408i - Field 7 will be validated for Data Type using entry: T2
+cldr1410i - Field 7 will replace data using entry: P1
+cldr1408i - Field 8 will be validated for Data Type using entry: T3
+cldr1410i - Field 8 will replace data using entry: P2
+cldr1411i - V0 - ValueValues : Dr
+cldr1411i - V1 - ValueValues : M, F
+cldr1412i - T0 - DataType : STRING
+cldr1412i - T1 - DataType : NAME
+cldr1412i - T2 - DataType : ALPHA
+cldr1412i - T3 - DataType : STRING
+cldr1429i - R0 - Ranges for - Begin: 0 End: 99999
+cldr1455i - P0 - Replace - From value: " To value: <blank>
+cldr1455i - P1 - Replace - From value: MD To value: Dr
+cldr1455i - P2 - Replace - From value: " To value: <blank>
+cldr1006i - Creating database connection
+cldr4000e - Creating db Connection
+cldr4020i - Deleted database: doctors
+cldr4023i - Created database: doctors
+cldr4015i - DataBase: doctors connection initialized
+cldr4002i - Initialized and connected to database, able to proceed
+cldr1010i - Index processing invoked
+cldr0600i - 2 index definitions to be processed
+cldr4027i - Index name: last_idx - Field name[0]: LastName
+cldr4027i - Index name: first_idx - Field name[0]: FirstName
+cldr4028i - Number of existing database indexes: 1 
+cldr4029i - Name: _all_docs (special): {"fields":[{"_id":"asc"}]}
+cldr0010i - Index list status: PASS
+cldr0303i - Using defined field names in config parm: inputfile.fieldnames
+cldr0401i - Header field name(s): 
+cldr0402i - Field 0 name = LastName
+cldr0402i - Field 1 name = FirstName
+cldr0402i - Field 2 name = Initial
+cldr0402i - Field 3 name = Gender
+cldr0402i - Field 4 name = Title
+cldr0402i - Field 5 name = Medical Shool
+cldr4026e - Index name: first_idx created successfully
+cldr4026e - Index name: last_idx created successfully
+cldr0305i - 5000 records added to database
+cldr0305i - 10000 records added to database
+cldr0305i - 15000 records added to database
+cldr0305i - 20000 records added to database
+cldr0305i - 25000 records added to database
+cldr0305i - 30000 records added to database
+cldr0305i - 35000 records added to database
+cldr0305i - 40000 records added to database
+cldr0308i - 40000 records added to database
+cldr0900i - End of input file reached
+cldr0901i - Records passing validation: 40000
+cldr0902i - Validation replacements   : 46372
+cldr0908i - Start date/time           : Wed Sep 28 2016 09:52:55 GMT-0500 (CDT)
+cldr0909i - End date/time             : Wed Sep 28 2016 09:53:01 GMT-0500 (CDT)
+cldr0910i - Elapsed time              : 0:6.15 (MM:SS.mmm)
+cldr0911i - Average Time/Record       : 0.150375 milliseconds
+cldr0999i - Program completed
+log

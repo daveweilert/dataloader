@@ -1,0 +1,14 @@
+{
+  "database": 
+    {
+        "dbname"  : "doctors44",
+        "url"     : "http://localhost:5984"
+    },
+
+  "inputfile": 
+    {
+        "filename"    : "/Users/daveweilert/GitHub/dataloader/example/000003_Data_File_TAB.txt"
+    }
+
+}
+

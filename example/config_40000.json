@@ -1,0 +1,42 @@
+{
+  "trialrun": false,
+  "batchsize": 5000,
+  "printreplacements" : false,
+
+  "database": 
+    {
+      "dbname"  : "doctors",
+      "create"  : true,
+      "url"     : "http://localhost:5984"
+    },
+
+	"buildindexes":
+		[
+			{"name": "last_idx",   "type": "json", "fields": ["LastName"] },
+			{"name": "first_idx",   "type": "json", "fields": ["FirstName"] }
+		],
+
+  "inputfile": 
+    {
+      "filename"    : "/Users/daveweilert/GitHub/dataloader/example/data_file_40000_TAB.txt",
+      "headerrow"   : false,
+      "keepfields"  : ["3","4","5","6","7","8"],
+      "skipfirstrow" : true,
+      "fieldnames"   : ["LastName","FirstName","Initial","Gender","Title","Medical Shool"],
+      "delimiter"    : "tab"
+    },
+
+  "validators":
+	  [
+		  {"fld":[21],      "task":"range",    "data": [0,99999]},
+		  {"fld":[0,1,2,5], "task":"datatype", "data": "string"},
+		  {"fld":[3,4],     "task":"replace",  "data": ["\"",""]},
+		  {"fld":[3,4],     "task":"datatype", "data": "name"},
+		  {"fld":[7],       "task":"datatype", "data": "alpha"},
+		  {"fld":[7],       "task":"values",   "data": ["Dr"]},
+		  {"fld":[7],       "task":"replace",  "data": ["MD","Dr"]},
+		  {"fld":[6],       "task":"values",   "data": ["M","F"]},
+		  {"fld":[8],       "task":"datatype", "data": "string"},
+		  {"fld":[8],       "task":"replace",  "data": ["\"",""]}	
+	  ]
+}
