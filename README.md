@@ -32,8 +32,8 @@
 
 	  "buildindexes":
 		[
-		  {"name": "last_idx",    "type": "json", "fields": ["LST_NAME"] },
-		  {"name": "first_idx",   "type": "json", "fields": ["FST_NAME"] }
+		  {"name": "last_idx",    "fields": ["LST_NAME"] },
+		  {"name": "first_idx",   "fields": ["FST_NAME"] }
 		],
 
       "validators":
