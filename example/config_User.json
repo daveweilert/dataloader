@@ -1,0 +1,25 @@
+{
+  "trialrun": false,
+  "batchsize": 10,
+
+  "database": 
+    {
+      "dbname"  : "people",
+      "create"  : true,
+      "url"     : "http://localhost:5984"
+    },
+
+  "inputfile": 
+    {
+      "filename"    : "/Users/daveweilert/GitHub/dataloader/example/data_file_4_User.txt",
+      "headerrow"   : false,
+      "fieldnames"  : ["FirstName","LastName","Gender","DOB","TEST"],
+      "delimiter"   : "@@"
+    },
+
+  "validators":
+	  [
+		  {"fld":[4], "task":"datatype", "data": "number"},
+		  {"fld":[0], "task":"range", "data": ["Adam","C"]}
+	  ]
+}

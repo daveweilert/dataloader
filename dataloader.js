@@ -85,7 +85,7 @@ readConfig.getConfig()
                 console.log('cldr0004e - Failed config file validation, unable to proceed')
                 process.exit(-1);
             } else {
-                debugger;
+
                 // check if running in TRIAL RUN mode if so, skip connecting to database and start 
                 if (cldr.trialrun === true) {
                     console.log('cldr0005i - Skipping database connection, running in trial run mode');

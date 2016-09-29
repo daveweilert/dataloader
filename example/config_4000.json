@@ -1,5 +1,5 @@
 {
-  "trialrun": false,
+  "trialrun": true,
   "batchsize": 1000,
   "printreplacements" : false,
 

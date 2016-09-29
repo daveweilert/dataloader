@@ -12,8 +12,8 @@
 
 	"buildindexes":
 		[
-			{"name": "last_idx",   "type": "json", "fields": ["LastName"] },
-			{"name": "first_idx",   "type": "json", "fields": ["FirstName"] }
+			{"name": "last_idx", "fields": ["LastName"] },
+			{"name": "first @_$ idx", "fields": ["FirstName"] }
 		],
 
   "inputfile": 
