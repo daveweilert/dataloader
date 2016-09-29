@@ -46,9 +46,10 @@
 		  {"fld":[21],      "task":"range",    "data": [0,99999]},
 		  {"fld":[6],       "task":"values",   "data": ["M","F"]},
           {"fld":[3,4],     "task":"datatype", "data": "name"},
-		  {"fld":[8,15,22], "task":"replace",  "data": ["\"",""]}	  ]
+		  {"fld":[8,15,22], "task":"replace",  "data": ["\"",""]}	    
+		]
     } ###Start command:
-	npm start ./example/config_4.json<br>###Console output: 	cldr1000i - Start Parameter: 0: /usr/local/bin/node
+	npm start ./example/config_4.json<br>###Console output: 	cldr1000i - Start Parameter: 0: /usr/local/bin/node
 	cldr1000i - Start Parameter: 1: /Users/daveweilert/dataloader.js
 	cldr1000i - Start Parameter: 2: ./example/config_4.json
 	cldr1001i - Loading parameters from configuration file: ././example/config_4.json
