@@ -20,6 +20,6 @@
   "validators":
 	  [
 		  {"fld":[4], "task":"datatype", "data": "number"},
-		  {"fld":[0], "task":"range", "data": ["Adam","C"]}
+		  {"fld":[0], "task":"range", "data": ["Adam","Dave"]}
 	  ]
 }
