@@ -464,6 +464,28 @@ As the application is executing processing messages are written to the console.
 
 Using sample files input data file 'data_file_4_TAB.txt' and configuration file 'config_4.json' (located in the example directory) the following console output is generated.
 
+### Run time parameters at start
+
+The node.js application is delivered to use the npm command to execute the dataloader application.  Examples of starting the program with or without the configuration file parameter follow:
+
+  npm start    (without a configuration file will use the default config.json file located in the directory where this command was executed)
+
+	Using three parameters:
+
+	npm start ./example/config_4.json
+
+The third parameter is the configuration file name.  The parameter can be defined with the complete path to the configuration file or use 'from' , 'home', or  'drive letter' syntax:
+
+#### from example
+npm start ./example/config.json  (will look for the file from the current path)
+
+#### home example
+npm start ~/example/config.json  (will look for the file from the user home path)
+
+#### drive letter example  (Windows only operating system support)
+npm start C:\Users\daveweilert\files\config.json  
+
+
 
 ### Configuration file:
 
@@ -502,33 +524,10 @@ Using sample files input data file 'data_file_4_TAB.txt' and configuration file 
 		]
     } 
 
-### Run time parameters at start
-
-The node.js application is delivered to use the npm command to execute the dataloader application.  Examples of starting the program with or without the configuration file parameter follow:
-
-  npm start    (without a configuration file will use the default config.json file located in the directory where this command was executed)
-
-	Using three parameters:
-
-	npm start ./example/config_4.json
-
-The third parameter is the configuration file name.  The parameter can be defined with the complete path to the configuration file or use 'from' , 'home', or  'drive letter' syntax:
-
-#### from example
-npm start ./example/config.json  (will look for the file from the current path)
-
-#### home example
-npm start ~/example/config.json  (will look for the file from the user home path)
-
-#### drive letter example  (Windows only operating system support)
-npm start C:\Users\daveweilert\files\config.json  
-
-
-
 
 <br>
 
-Example Console output: 
+Example console output: 
 ================================================================================
 
 	cldr0000i - Runtime OpSys: darwin  Home: /Users/daveweilert
