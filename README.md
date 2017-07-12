@@ -29,7 +29,7 @@ Installation
 		Node.js and NPM are required to install and execute this application
 </b>
 
-Download the source files and place in a directory.  Change to the directory where the files were placed. Run the following NPM command to install the require Node modules:
+Download the source files and place in a directory.  Change to the install directory where the files were placed. Run the following NPM command to install the require Node modules:
 
 	npm install
 
@@ -38,11 +38,11 @@ Once the above has successfully completed the application can be run.  Located i
 
 Optionally edit line 2: "trailrun": false, change false to true.  This will allow the program to run without any database connection.  Once you have verified the application has been installed and will execute the parameters for the "database" will need to also be changed to point to a target database. If you changed the "trialrun" to ture be sure to change it back to false to allow the input to be loaded to the database.
 
-Run the program;
+Test the run program install:  (assumes you are running the program from the install directory)
 
 <b>
 
-	npm start ./example/config_4.json    (OR)    node dataloader.js   ./example/config_4.json 
+	npm start ./example/config_4.json   
 </b> 
 
 
