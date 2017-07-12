@@ -512,7 +512,7 @@ The node.js application is delivered to use the npm command to execute the datal
 
 	npm start ./example/config_4.json
 
-The third parameter is the configuration file name.  The parameter can be defined with the complete path to the configuration file or use 'from' , 'home', 'drive letter' syntax:
+The third parameter is the configuration file name.  The parameter can be defined with the complete path to the configuration file or use 'from' , 'home', or  'drive letter' syntax:
 
 #### from example
 npm start ./example/config.json  (will look for the file from the current path)
