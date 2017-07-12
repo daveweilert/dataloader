@@ -122,7 +122,10 @@ Example:
 </b>
 
 <br>
-###"database"
+
+"database"
+================================================================================
+
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
 | Req | sub-parms | N/A | Defines the output database. 
@@ -170,7 +173,10 @@ Example:
 
 
 <br>
-###"inputfile"
+
+"inputfile"
+================================================================================
+
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
 | Req | sub-parms | N/A | Defines the input file of data to be loaded into the database. 
@@ -233,7 +239,10 @@ Example:
 </b>
 
 <br>
-###"printreplacements"
+
+"printreplacements"
+================================================================================
+
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
 | Opt | <b>true</b> or <b>false</b> | false | true = print details of replacement providing the record number, field number, and position <br> false = do not print replacement information 
@@ -257,7 +266,9 @@ Example:
 
 
 <br>
-###"trialrun"
+
+"trialrun"
+================================================================================
 
 A common use for this parameter is to validate data prior to inserting the data into the database. 
 
@@ -292,11 +303,10 @@ Example:
 	  cldr0305i - 2000 records added to database
 </b>
 
-
-
-
 <br>
-###"validators"
+
+"validators"
+================================================================================
 
 Four task types of validators can be defined.  Three of the validator tasks help ensure the integrity of data that is to be added to the database.  The fourth validator task is used to replace all occurrences of data in a single field.  
 
@@ -313,7 +323,8 @@ Each validator is defined using three parameters:<br>
 
 <br>
 
-###Validator Tasks
+Validator Tasks
+================================================================================
 
 The following are the valid values that can be used for the 'task' parameter.  The order of execution for validators defined for a single field is the same as listed in the following table.
 
@@ -340,9 +351,13 @@ Example validators with multiple definitions.  Notice fields 3, 4, 7, and 8 have
 		  {"fld":[8],       "task":"datatype", "data": "string"},
 		  {"fld":[8],       "task":"replace",  "data": ["\"",""]}	  ]
 
-##Parameter values for each type of validator:
 
-###"replace"
+
+Parameter values for each type of validator:
+================================================================================
+
+"replace"
+================================================================================
 
 | "fld" | "task" | "data" |
 | :-------: | :----: | ----- |
@@ -363,7 +378,8 @@ Example:
      {"fld":[0,4,9], "task":"replace", "data": ["\"",""]}
 </b>	
 
-###"values"
+"values"
+================================================================================
 
 | "fld" | "task" | "data" |
 | :-------: | :----: | ----- |
@@ -384,7 +400,8 @@ Example:
      {"fld":[20],  "task":"values",  "data": ["AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MP","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"]}, 
 </b>
 
-###"range"
+"range"
+================================================================================
 
 | "fld" | "task" | "data" |
 | :-------: | :----: | ----- |
@@ -406,7 +423,8 @@ Example:
 </b>
 
 
-###"dataype"
+"dataype"
+================================================================================
 
 
 | "fld" | "task" | "data" |
@@ -447,14 +465,18 @@ Example:
 </b>	
 <br>
 
-##Processing output log
+Processing output log
+================================================================================
+
 As the application is executing processing messages are written to the console.  
 
 Using sample files input data file 'data_file_4_TAB.txt' and configuration file 'config_4.json' (located in the example directory) the following console output is generated.
 
 
-###Configuration file:
-	
+Configuration file:
+================================================================================
+
+
     {
       "trialrun": false,
       "batchsize": 10,
@@ -489,13 +511,16 @@ Using sample files input data file 'data_file_4_TAB.txt' and configuration file 
 		]
     } 
 
-###Start command:
+Start command:
+================================================================================
 
 	npm start ./example/config_4.json
 
 
 <br>
-###Console output: 
+
+Console output: 
+================================================================================
 
 
 	cldr1000i - Start Parameter: 0: /usr/local/bin/node
@@ -595,9 +620,10 @@ Using sample files input data file 'data_file_4_TAB.txt' and configuration file 
 
 
 
-## Maintainer
+Maintainer
+================================================================================
 
-#### Dave Weilert
+ Dave Weilert
 
 http://github.com/daveweilert/dataloader.git/
 
