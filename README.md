@@ -64,8 +64,7 @@ The above configuration file is using the "inputfile" parameter defaults a.) tab
 
 <br>
 
-Parameters
-================================================================================
+## Parameters
 
 The key parameter and sub-parameters are case sensitive and only use lower case characters to define the values.  The users values that are provided for each parameter are not required to be lower case.  The following tables lists the parameter, required or optional, valid values, default value, description, sub-parameters, and example(s).  
 <br>
@@ -353,7 +352,6 @@ Example validators with multiple definitions.  Notice fields 3, 4, 7, and 8 have
 
 
 ### Parameter values for each type of validator:
-================================================================================
 
 #### "replace"
 
@@ -461,7 +459,6 @@ Example:
 <br>
 
 ### Processing output log
-================================================================================
 
 As the application is executing processing messages are written to the console.  
 
@@ -469,7 +466,6 @@ Using sample files input data file 'data_file_4_TAB.txt' and configuration file 
 
 
 ### Configuration file:
-================================================================================
 
 
     {
@@ -506,14 +502,11 @@ Using sample files input data file 'data_file_4_TAB.txt' and configuration file 
 		]
     } 
 
-### Start command:
-================================================================================
+### Run time parameters at start
 
-The following command can be used to execute the dataloader application.  Two values are required:
+The node.js application is delivered to use the npm command to execute the dataloader application.  Examples of starting the program with or without the configuration file parameter follow:
 
   npm start    (without a configuration file will use the default config.json file located in the directory where this command was executed)
-
-	(or)
 
 	Using three parameters:
 
@@ -530,12 +523,15 @@ npm start ~/example/config.json  (will look for the file from the user home path
 #### drive letter (Windows operating system support)
 npm start C:\Users\daveweilert\files\config.json  
 
+
+
+
 <br>
 
-Console output: 
+Example Console output: 
 ================================================================================
 
-
+	cldr0000i - Runtime OpSys: darwin  Home: /Users/daveweilert
 	cldr1000i - Start Parameter: 0: /usr/local/bin/node
 	cldr1000i - Start Parameter: 1: /Users/daveweilert/dataloader.js
 	cldr1000i - Start Parameter: 2: ./example/config_4.json
