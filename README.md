@@ -458,6 +458,9 @@ Example:
 </b>	
 <br>
 
+# Running dataloader
+==========================
+
 ### Processing output log
 
 As the application is executing processing messages are written to the console.  
@@ -487,7 +490,7 @@ npm start C:\Users\daveweilert\files\config.json
 
 
 
-### Configuration file:
+### Example Configuration file:
 
 
     {
