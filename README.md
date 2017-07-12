@@ -242,9 +242,11 @@ Example:
 
 #### Windows file input
 
-If using Windows operating system the input file name should use the drive letter and forward slash syntax:
+If using Windows operating system the input file name can use  the drive letter and <b>must</b> use the forward slash syntax:
 
 Example:  "filename"    : "D:/Users/daveweilert/mydatainputfile.txt"
+
+Optionally for Windows the use the './' or '~' syntax are permitted instead of the drive letter syntax. 
 
 <br>
 
