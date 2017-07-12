@@ -520,7 +520,7 @@ npm start ./example/config.json  (will look for the file from the current path)
 #### home example
 npm start ~/example/config.json  (will look for the file from the user home path)
 
-#### drive letter (Windows operating system support)
+#### drive letter example  (Windows only operating system support)
 npm start C:\Users\daveweilert\files\config.json  
 
 
