@@ -36,7 +36,7 @@ Download the source files and place in a directory.  Change to the install direc
 Once the above has successfully completed the application can be run.  Located in the /example/ directory edit line 15 of the file Config_4.json changing the location of the example files provided with this application.  If the file defined is not loacted at program execution the following error will be displayed in the console:
 
 <b>
-cldr0301e - Error: ENOENT: no such file or directory, open 'large_refund_data.csvx'
+cldr0301e - Error: ENOENT: no such file or directory, open 'myData.txt'
 </b>
 <br>
 <br>
