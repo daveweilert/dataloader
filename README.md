@@ -33,7 +33,11 @@ Download the source files and place in a directory.  Change to the install direc
 
 	npm install
 
-Once the above has successfully completed the application can be run.  Located in the /example/ directory edit line 15 of the file Config_4.json changing the location of the example files provided with this application.  
+Once the above has successfully completed the application can be run.  Located in the /example/ directory edit line 15 of the file Config_4.json changing the location of the example files provided with this application.  If the file defined is not loacted at program execution the following error will be displayed in the console:
+
+<b>
+cldr0301e - Error: ENOENT: no such file or directory, open 'large_refund_data.csvx'
+</b>
 
 
 Optionally edit line 2: "trailrun": false, change false to true.  This will allow the program to run without any database connection.  Once you have verified the application has been installed and will execute the parameters for the "database" will need to also be changed to point to a target database. If you changed the "trialrun" to ture be sure to change it back to false to allow the input to be loaded to the database.
