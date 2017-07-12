@@ -70,8 +70,7 @@ Parameters
 The key parameter and sub-parameters are case sensitive and only use lower case characters to define the values.  The users values that are provided for each parameter are not required to be lower case.  The following tables lists the parameter, required or optional, valid values, default value, description, sub-parameters, and example(s).  
 <br>
 
-"batchsize"
-================================================================================
+### "batchsize"
 
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
@@ -90,8 +89,7 @@ Example:
 
 <br>
 
-"buildindexes"
-================================================================================
+### "buildindexes"
 
 
 | Req/Opt | Valid Value(s) | Default | Description |
@@ -123,8 +121,7 @@ Example:
 
 <br>
 
-"database"
-================================================================================
+### "database"
 
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
@@ -174,8 +171,7 @@ Example:
 
 <br>
 
-"inputfile"
-================================================================================
+### "inputfile"
 
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
@@ -223,7 +219,7 @@ Example:
       
 </b>
 
-3 - Load records from user defined delimiter '@@' from data file: 20789data.accounts.  Loading only fields 1, 4, 5, 8 and label them with the user defined field names.  Ensure the first record skipped and do not use the field names contained in the first record.
+3 - Load records from user defined delimiter '@@' from data file: 20789data.accounts.  Loading only fields 1, 4, 5, 8 and label them with the user defined field names.  Ensure the first record skipped and do not use the field names contained in the first record.  
 <br>
 <b>
 
@@ -238,10 +234,15 @@ Example:
 
 </b>
 
+#### Windows file input
+
+If using Windows operating system the input file name should use the drive letter and forward slash syntax:
+
+Example:  "filename"    : "D:/Users/daveweilert/mydatainputfile.txt"
+
 <br>
 
-"printreplacements"
-================================================================================
+### "printreplacements"
 
 | Req/Opt | Valid Value(s) | Default | Description |
 | :----:  | -----          | :----:  | -----       |
@@ -267,8 +268,7 @@ Example:
 
 <br>
 
-"trialrun"
-================================================================================
+### "trialrun"
 
 A common use for this parameter is to validate data prior to inserting the data into the database. 
 
@@ -305,8 +305,7 @@ Example:
 
 <br>
 
-"validators"
-================================================================================
+### "validators"
 
 Four task types of validators can be defined.  Three of the validator tasks help ensure the integrity of data that is to be added to the database.  The fourth validator task is used to replace all occurrences of data in a single field.  
 
@@ -323,8 +322,7 @@ Each validator is defined using three parameters:<br>
 
 <br>
 
-Validator Tasks
-================================================================================
+#### Validator Tasks
 
 The following are the valid values that can be used for the 'task' parameter.  The order of execution for validators defined for a single field is the same as listed in the following table.
 
@@ -353,11 +351,11 @@ Example validators with multiple definitions.  Notice fields 3, 4, 7, and 8 have
 
 
 
-Parameter values for each type of validator:
+
+### Parameter values for each type of validator:
 ================================================================================
 
-"replace"
-================================================================================
+#### "replace"
 
 | "fld" | "task" | "data" |
 | :-------: | :----: | ----- |
@@ -378,8 +376,7 @@ Example:
      {"fld":[0,4,9], "task":"replace", "data": ["\"",""]}
 </b>	
 
-"values"
-================================================================================
+#### "values"
 
 | "fld" | "task" | "data" |
 | :-------: | :----: | ----- |
@@ -400,8 +397,7 @@ Example:
      {"fld":[20],  "task":"values",  "data": ["AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MP","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"]}, 
 </b>
 
-"range"
-================================================================================
+#### "range"
 
 | "fld" | "task" | "data" |
 | :-------: | :----: | ----- |
@@ -423,8 +419,7 @@ Example:
 </b>
 
 
-"dataype"
-================================================================================
+#### "dataype"
 
 
 | "fld" | "task" | "data" |
@@ -465,7 +460,7 @@ Example:
 </b>	
 <br>
 
-Processing output log
+### Processing output log
 ================================================================================
 
 As the application is executing processing messages are written to the console.  
@@ -473,7 +468,7 @@ As the application is executing processing messages are written to the console.
 Using sample files input data file 'data_file_4_TAB.txt' and configuration file 'config_4.json' (located in the example directory) the following console output is generated.
 
 
-Configuration file:
+### Configuration file:
 ================================================================================
 
 
@@ -511,11 +506,29 @@ Configuration file:
 		]
     } 
 
-Start command:
+### Start command:
 ================================================================================
+
+The following command can be used to execute the dataloader application.  Two values are required:
+
+  npm start    (without a configuration file will use the default config.json file located in the directory where this command was executed)
+
+	(or)
+
+	Using three parameters:
 
 	npm start ./example/config_4.json
 
+The third parameter is the configuration file name.  The parameter can be defined with the complete path to the configuration file or use 'from' , 'home', 'drive letter' syntax:
+
+#### from example
+npm start ./example/config.json  (will look for the file from the current path)
+
+#### home example
+npm start ~/example/config.json  (will look for the file from the user home path)
+
+#### drive letter (Windows operating system support)
+npm start C:\Users\daveweilert\files\config.json  
 
 <br>
 
