@@ -39,17 +39,31 @@ global.records = {
 global.wrtCnt = 0;
 
 var cfParm = false;
+console.log('\n');
+var osys = process.platform;
+var home = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
+console.log('cldr0000i - Runtime OpSys: ' + osys + '  Home: ' + home);
 
 //------------------------------------------------------------------------------
 // read parms from program start command
 //------------------------------------------------------------------------------
-console.log('\n');
 // Display the program start parameters and name of the configuration file that is to be used
 process.argv.forEach(function (val, index, array) {
+    var osys = process.platform;
     console.log('cldr0000i - Start Parameter: ' + index + ': ' + val);
     if (index === 2) {
         cfParm = true;
         if (val.startsWith('/')) {
+            cldr.configFileName = val;
+        } else if (val.startsWith('~')) {
+            cldr.configFileName = home + val.substring(1);
+        } else if (osys === 'win32' || osys === 'win64') {
+            if (val.indexOf(":") === -1) {
+                cldr.configFileName = './' + val;
+            } else  {
+                cldr.configFileName = val;
+            }
+        } else if (val.startsWith('./')) {
             cldr.configFileName = val;
         } else {
             cldr.configFileName = './' + val;
